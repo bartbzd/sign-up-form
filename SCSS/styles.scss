@@ -11,14 +11,28 @@ $text-disabled: #707178;
 }
 body {
     background-color: $background-color;
+    color: $text-white;
 }
 form {
     background-color: $card-color;
     border-radius: 25px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
+
 img {
     border-radius: 25px 0px 0px 25px;
+}
+h2, p {
+    color: $text-white;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+label {
+    font-size: 12px;
+}
+input {
+    padding: 0;
 }
 .container {
     height: 500px;
@@ -27,4 +41,7 @@ img {
 }
 .columns {
     padding-left: 0;
+}
+#first-name, #last-name {
+    margin-left: 15px;
 }
