@@ -1,13 +1,27 @@
+$background-color: #1b1c21;
+$card-color:#222328;
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-.container-md {
-    height: 400px;
-    margin: auto;
-    margin-top: 200px;
-    max-width: 700px;
-    background-color:cadetblue;
+body {
+    background-color: $background-color;
+}
+form {
+    background-color: $card-color;
+    border-radius: 25px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+img {
+    border-radius: 25px 0px 0px 25px;
+}
+.container {
+    height: 500px;
+    width: 720px;
+    margin-top: 160px;
+}
+.columns {
+    padding-left: 0;
 }
