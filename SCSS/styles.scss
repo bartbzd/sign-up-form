@@ -20,41 +20,73 @@ body {
 }
 form {
     padding: 0 10px;
-    h2, p {
+    h2, h3 {
+        text-align: center;
+    }
+    h2 + p {
        color: $text-white;
     }
     h2 {
-        margin-top: 40px; 
+        margin-top: 40px;
         }
     p {
         margin-top: 30px;
-        padding-left: 5px;
+        margin-bottom: 0;
+        padding-right: 10px;
+    }
+    .sign-up {
+        margin-top: 5px;
+        font-size: 10px;
+        color: $text-grey;
     }
     
 }
 img {
     border-radius: 25px 0px 0px 25px;
 }
+
+.container-inputs {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
 label {
-    font-size: 12px;
+    font-size: 10px;
     color: $text-grey;
+    padding-left: 2px;
+    margin-top: 10px;
 }
 input {
-    width: 180px;
-    border-radius: 12px;
-    border: none;
+    background-color: #fbfaff;
+    font-size: 10px;
+    width: 182px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid #fbfaff;
+    outline: none;
     padding-left: 9px;
     padding-bottom: 1px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+input:hover {
+    background-color: #B8B3C8;
+    border: 2px solid #B8B3C8;
+}
+input:focus { 
+        border: 2px solid #fb8ab7;
+        background-color: #B8B3C8;
+    }
+input:valid {
+    border: 2px solid #6def78;
 }
 .container {
     height: 500px;
     width: 720px;
     margin-top: 160px;
 }
-// .columns {
-//     padding-left: 0;
-// }
 label,input{
   display:flex;
   flex-direction:column;
 }
+
