@@ -48,13 +48,15 @@ form {
         font-size: 14px;
         margin-top: 30px;
         margin-bottom: 0;
-        padding-right: 10px;
     }
     .sign-up {
         margin-top: 5px;
         font-size: 10px;
         color: $text-grey;
     }
+    // .text-content {
+    //     padding-left: ;
+    // }
     
 }
 .smoke-img {
@@ -68,6 +70,10 @@ img.responsive-md {
     margin-top: 30px;
     justify-content: space-between;
 }
+.input-row {
+    display: flex;
+}
+
 label {
     font-size: 10px;
     color: $text-grey;
@@ -80,16 +86,16 @@ input {
     width: 182px;
     height: 26px;
     border-radius: 8px;
-    border: 2px solid #E0E0E2;
+    border: none;
     outline: none;
     padding-left: 5px;
     padding-bottom: 1px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
 }
 input:hover:not(:focus) {
     background-color: #B8B3C8;
-    border: 2px solid #B8B3C8;
     transform: scale(1.03);
 
     // &:active {
@@ -107,9 +113,8 @@ input:valid {
 input[type=email]:invalid {
     border:1px solid #fa1d1d;
 }
-.container-md {
-    // height: 500px;
-    max-width: 720px;
+.container-lg {
+    max-width: 960px;
     margin-top: 80px;
 }
 label,input{
@@ -120,7 +125,7 @@ label,input{
     margin: 0 auto;
     margin-top: 20px;
     height: 30px;
-    width: 120px;
+    width: 137px;
   
 }
 button {
@@ -139,13 +144,12 @@ button {
     }
     &:active {
         transform: scale(0.98);
-    
     }
 }
 .member {
     font-size: 12px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left:10px;
     color: $text-grey;
 }
@@ -156,8 +160,26 @@ a {
         color: #d8799d;
     }
 }
+// .click-group {
+//     padding-right: 23px;
+// }
+@media (min-width: 991px){
+    input{
+        width: 240px;
+    }
+//     .input-col {
+//     display: flex;
+//     justify-content: center;
+// }
+}
+@media (max-width: 991px) {
+.container-lg {
+    max-width: 720px;
+    margin-top: 80px;
+}
+}
 @media (max-width: 767px) {
-    .container-md {
+    .container-lg {
         max-width: 460px;
     }
     .smoke-img {
@@ -175,8 +197,7 @@ a {
         
     }
     .member {
-        margin-top: 40px;
-        padding-bottom: 5px;
+        margin-top: 20px;
     }
 }
 
