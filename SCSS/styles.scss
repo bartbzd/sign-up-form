@@ -3,7 +3,7 @@ $card-color:#222328;
 $text-white: #f3f5f8;
 $text-grey: #afb0b7;
 $text-disabled: #707178;
-$enable-rfs: false;
+// $enable-rfs: false;
 
 *{
     box-sizing: border-box;
@@ -15,13 +15,16 @@ body {
     background-color: $background-color;
     color: $text-white;
 }
+.container-lg {
+    max-width: 960px;
+    margin-top: 80px;
+}
 .main-card {
     background-color: $card-color;
     border-radius: 25px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 form {
-    
     padding: 0 10px;
     h2, h3 {
         text-align: center;
@@ -54,10 +57,7 @@ form {
         font-size: 10px;
         color: $text-grey;
     }
-    // .text-content {
-    //     padding-left: ;
-    // }
-    
+
 }
 .smoke-img {
     border-radius: 25px 0px 0px 25px;
@@ -70,9 +70,9 @@ img.responsive-md {
     margin-top: 30px;
     justify-content: space-between;
 }
-.input-row {
-    display: flex;
-}
+// .input-row {
+//     display: flex;
+// }
 
 label {
     font-size: 10px;
@@ -82,8 +82,9 @@ label {
 }
 input {
     font-family: 'Mulish', sans-serif;
-    background-color: #E0E0E2;
+    background-color: #ada6c1;
     font-size: 12px;
+    color: $background-color;
     width: 182px;
     height: 27px;
     border-radius: 8px;
@@ -91,59 +92,64 @@ input {
     outline: none;
     padding-left: 5px;
     padding-bottom: 1px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
 }
 input:hover:not(:focus) {
-    background-color: #B8B3C8;
+    background-color: #F1E6F9;
     transform: scale(1.03);
 
     // &:active {
     //     transform: scale(.98);
     // }
 }
+
 input:focus { 
-        border: 2px solid #B8B3C8;
-        background-color: #B8B3C8;
+        background-color: #F1E6F9;
         transform: scale(1);
-    }
-input:valid {
-    transition: 0.3s;
-    border: 1px solid #78f783;
+}
+input:hover:focus {
+    pointer-events: none;
+}
+input:not(:placeholder-shown):invalid {
+    border-bottom:1px solid #fa1d1d;
 }
 input[type=email]:invalid {
-    border:1px solid #fa1d1d;
+    border-bottom:1px solid #fa1d1d;
     
 }
-.container-lg {
-    max-width: 960px;
-    margin-top: 80px;
+::placeholder {
+    color: #747578;
 }
+input:focus::placeholder {
+  color: transparent;
+}
+
 label,input{
   display:flex;
   flex-direction:column;
 }
 .button {
     // margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 30px;
     height: 30px;
     width: 137px;
   
 }
 button {
-    color: #2F2F2F;
+    color: $background-color;
     font-size: 12px;
     font-weight: 700;
     border-radius: 10px;
     margin-right: 20px;
-    margin-left: 195px;
+    margin-left: 194px;
     border: none;
     background: rgb(157,117,208);
-    background-image: linear-gradient(20deg, rgba(174, 128, 234, 0.538) 0%, rgba(174, 128, 234, 0.538) 10%,rgba(184, 104, 135, 0.863) 100%);
+    background-image: linear-gradient(20deg, rgba(174, 128, 234, 0.538) 0%, rgba(174, 128, 234, 0.538) 10%, rgba(184, 104, 135, 0.863) 80%,rgba(255,172,39,1) 110%);
     box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
     transition: 0.3s;
-    background-size: 140% auto;
+    background-size: 130% auto;
     &:hover {
         transform: scale(1.03);
         transition: 0.2s;
@@ -156,8 +162,8 @@ button {
 .member {
     font-size: 12px;
     // text-align: center;
-    margin-top: 30px;
-    margin-left: 170px;
+    margin-top: 15px;
+    margin-left: 169px;
     padding-left:10px;
     color: $text-grey;
     outline: none;
@@ -169,9 +175,9 @@ a {
         color: #d8799d;
     }
 }
-// .button {
-//     margin-left: 23px;
-// }
+a:hover {
+    color: #F1E6F9;
+}
 @media (min-width: 991px){
     input{
         width: 240px;
@@ -185,6 +191,15 @@ a {
 .container-lg {
     max-width: 720px;
     margin-top: 80px;
+}
+button {
+    margin: 0;
+    margin-left:130px;
+}
+.member {
+    margin: 0;
+    margin-left:105px;
+    margin-top: 10px;
 }
 }
 @media (max-width: 767px) {
@@ -205,13 +220,19 @@ a {
         margin-top: 15px;
         
     }
+    p {
+        margin-left: 16px;
+        margin-right: 7px;
+    }
     .member {
-        margin-top: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
     }
 }
 
 @media (max-width: 574px) {
-    .col-sm {
+    .col-sm-6 {
         max-width: 199px;
     }
 }
