@@ -81,10 +81,11 @@ label {
     margin-top: 10px;
 }
 input {
+    font-family: 'Mulish', sans-serif;
     background-color: #E0E0E2;
     font-size: 12px;
     width: 182px;
-    height: 26px;
+    height: 27px;
     border-radius: 8px;
     border: none;
     outline: none;
@@ -108,10 +109,12 @@ input:focus {
         transform: scale(1);
     }
 input:valid {
+    transition: 0.3s;
     border: 1px solid #78f783;
 }
 input[type=email]:invalid {
     border:1px solid #fa1d1d;
+    
 }
 .container-lg {
     max-width: 960px;
@@ -122,7 +125,7 @@ label,input{
   flex-direction:column;
 }
 .button {
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: 20px;
     height: 30px;
     width: 137px;
@@ -133,14 +136,18 @@ button {
     font-size: 12px;
     font-weight: 700;
     border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 195px;
     border: none;
     background: rgb(157,117,208);
     background-image: linear-gradient(20deg, rgba(174, 128, 234, 0.538) 0%, rgba(174, 128, 234, 0.538) 10%,rgba(184, 104, 135, 0.863) 100%);
     box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
     transition: 0.3s;
+    background-size: 140% auto;
     &:hover {
         transform: scale(1.03);
         transition: 0.2s;
+        background-position: right center;
     }
     &:active {
         transform: scale(0.98);
@@ -148,10 +155,12 @@ button {
 }
 .member {
     font-size: 12px;
-    text-align: center;
-    margin-top: 20px;
+    // text-align: center;
+    margin-top: 30px;
+    margin-left: 170px;
     padding-left:10px;
     color: $text-grey;
+    outline: none;
 }
 a {
     color: #d8799d;
@@ -160,8 +169,8 @@ a {
         color: #d8799d;
     }
 }
-// .click-group {
-//     padding-right: 23px;
+// .button {
+//     margin-left: 23px;
 // }
 @media (min-width: 991px){
     input{
