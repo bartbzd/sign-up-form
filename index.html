@@ -21,37 +21,37 @@
                     <img class="responsive-md" src="img/responsive-md.png">
                 </div>
                 <div class="col-md-7 columns">
-                    <form action="" class="main-form">
+                    <form action="#" class="main-form">
                         <h2 class="form-header">Introducing Onyx Suite</h2>
                         <h3>Creativity Unleashed</h3>
                         <div class="text-content">
-                            <p class="form-description">From illustration to 3D modeling and video editing, our newly bundled suite of 30+ apps unleashes your true potential for limitless creativity.</p>
+                            <p class="form-description">From illustration to 3D modeling and video editing, our newly bundled suite of 30+ apps unleashes the true potential of your limitless creativity.</p>
                             <p class="sign-up">*Sign up to opt into the beta for a chance at early access.</p>
                         </div>
                         <div class="container-inputs row g-0">
                                 <div class="col-sm-6">
                                     <label for="first-name">First Name</label>
-                                    <input type="text" id="first-name" maxlength="14" required>
+                                    <input type="text" id="first-name" maxlength="14" pattern="^[A-Za-z]+$" placeholder="John" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" maxlength="14" required>
+                                    <input type="text" id="last-name" maxlength="14" pattern="^[A-Za-z]+$" placeholder="Smith" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="username">Username</label>
-                                    <input type="text" id="username" maxlength="14" required>
+                                    <input type="text" id="username" minlength="3" maxlength="14" placeholder="Username" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="email">Email Address</label>
-                                    <input type="email" id="email" required>
+                                    <input type="email" id="email" minlength="3" placeholder="youremail@gmail.com" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="password">Password</label>
-                                    <input type="password" id="password" minlength="6" required>
+                                    <input type="password" id="password" minlength="6" placeholder="••••••" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="confirm-password">Confirm Password</label>
-                                    <input type="password" id="confirm-password" minlength="6" required>
+                                    <input type="password" id="confirm-password" minlength="6" placeholder="••••••" required>
                                 </div>
 
                                 <div class="click-group">
@@ -59,7 +59,7 @@
                                         <button>Create Account</button>
                                     </div>
                                     <div class="member-login">
-                                        <p class="member">Already a member? <a href="">Log in.</a></p>
+                                        <p class="member">Already a member? <a href="#">Log in.</a></p>
                                     </div>
                                 </div>
                         </div>
