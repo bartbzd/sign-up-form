@@ -3,7 +3,6 @@ $card-color:#222328;
 $text-white: #f3f5f8;
 $text-grey: #afb0b7;
 $text-disabled: #707178;
-// $enable-rfs: false;
 
 *{
     box-sizing: border-box;
@@ -70,10 +69,6 @@ img.responsive-md {
     margin-top: 30px;
     justify-content: space-between;
 }
-// .input-row {
-//     display: flex;
-// }
-
 label {
     font-size: 10px;
     color: $text-grey;
@@ -95,47 +90,39 @@ input {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
-}
-input:hover:not(:focus) {
-    background-color: #F1E6F9;
-    transform: scale(1.03);
 
-    // &:active {
-    //     transform: scale(.98);
-    // }
-}
-
-input:focus { 
+    &:focus { 
         background-color: #F1E6F9;
         transform: scale(1);
-}
-input:hover:focus {
+    }
+    &:focus::placeholder {
+  color: transparent;
+    }
+    &:focus:hover {
     pointer-events: none;
 }
-input:not(:placeholder-shown):invalid {
+    &:hover:not(:focus) {
+    background-color: #F1E6F9;
+    transform: scale(1.03);
+    }
+    &:not(:placeholder-shown):invalid {
     border-bottom:1px solid #fa1d1d;
-}
-input[type=email]:invalid {
+    }  
+    &[type=email]:invalid {
     border-bottom:1px solid #fa1d1d;
-    
+    }
 }
 ::placeholder {
     color: #747578;
 }
-input:focus::placeholder {
-  color: transparent;
-}
-
 label,input{
   display:flex;
   flex-direction:column;
 }
 .button {
-    // margin: 0 auto;
     margin-top: 30px;
     height: 30px;
     width: 137px;
-  
 }
 button {
     color: $background-color;
@@ -146,10 +133,15 @@ button {
     margin-left: 194px;
     border: none;
     background: rgb(157,117,208);
-    background-image: linear-gradient(20deg, rgba(174, 128, 234, 0.538) 0%, rgba(174, 128, 234, 0.538) 10%, rgba(184, 104, 135, 0.863) 80%,rgba(255,172,39,1) 110%);
-    box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
-    transition: 0.3s;
     background-size: 130% auto;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
+    background-image: linear-gradient(20deg, 
+                        rgba(174, 128, 234, 0.538) 0%, 
+                        rgba(174, 128, 234, 0.538) 10%,
+                        rgba(184, 104, 135, 0.863) 80%,
+                        rgba(255,172,39,1) 110%);
+    transition: 0.3s;
+    
     &:hover {
         transform: scale(1.03);
         transition: 0.2s;
@@ -174,33 +166,30 @@ a {
     &:visited {
         color: #d8799d;
     }
-}
-a:hover {
+    &:hover {
     color: #F1E6F9;
+    }
 }
+
 @media (min-width: 991px){
     input{
         width: 240px;
     }
-//     .input-col {
-//     display: flex;
-//     justify-content: center;
-// }
 }
 @media (max-width: 991px) {
-.container-lg {
+    .container-lg {
     max-width: 720px;
     margin-top: 80px;
-}
-button {
+    }
+    button {
     margin: 0;
     margin-left:130px;
-}
-.member {
+    }
+    .member {
     margin: 0;
     margin-left:105px;
     margin-top: 10px;
-}
+    }
 }
 @media (max-width: 767px) {
     .container-lg {
