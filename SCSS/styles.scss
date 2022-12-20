@@ -4,12 +4,15 @@ $text-white: #f3f5f8;
 $text-grey: #afb0b7;
 $text-disabled: #707178;
 
-*{
-    box-sizing: border-box;
+*{ 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;  
     font-family: 'Mulish', sans-serif;
 }
+
 body {
     background-color: $background-color;
     color: $text-white;
@@ -22,7 +25,21 @@ body {
     background-color: $card-color;
     border-radius: 25px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    
 }
+.fade {
+    animation: fadeIn 1s forwards;
+    -webkit-animation: fadeIn 1s forwards;
+    -moz-animation: fadeIn 1s forwards;
+    -o-animation: fadeIn 1s forwards;
+    -ms-animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 form {
     padding: 0 10px;
     h2, h3 {
@@ -37,8 +54,14 @@ form {
     h3 {
         font-size: 18px;
         color: rgb(157,117,208);
-        background-image: linear-gradient(10deg, rgb(174, 128, 234) 0%, rgb(248, 116, 154) 100%);
-        background-size: 100%;
+        background: repeating-linear-gradient(70deg, 
+                        rgb(186, 137, 250) 0%, 
+                        rgb(228, 121, 162) 50%,
+                        rgb(186, 137, 250) 100%) 200%,
+                        transparent;
+    animation: textclip 5s linear infinite;
+    background-size: 200% 100%;
+        // background-size: 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -77,43 +100,51 @@ label {
 }
 input {
     font-family: 'Mulish', sans-serif;
-    background-color: #ada6c1;
+    background-color: #726B88;
     font-size: 12px;
-    color: $background-color;
     width: 182px;
     height: 27px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #726B88;
     outline: none;
     padding-left: 5px;
     padding-bottom: 1px;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
 
     &:focus { 
-        background-color: #F1E6F9;
+        background-color: #ada6c1;
+        border: 3px solid #ada6c1;
         transform: scale(1);
+        pointer-events: none;
     }
     &:focus::placeholder {
-  color: transparent;
+    color: transparent;
     }
     &:focus:hover {
     pointer-events: none;
 }
     &:hover:not(:focus) {
-    background-color: #F1E6F9;
+    background-color: #8c82a7;
     transform: scale(1.03);
+    }
+    &:hover:valid {
+        background-color: #ada6c1;
+        border: 3px solid #ada6c1;
     }
     &:not(:placeholder-shown):invalid {
     border-bottom:1px solid #fa1d1d;
     }  
     &[type=email]:invalid {
-    border-bottom:1px solid #fa1d1d;
+    border:0.07rem solid #fa1d1d;
+    }&:valid {
+        background-color: #ada6c1;
+        border: 3px solid #ada6c1;
     }
 }
 ::placeholder {
-    color: #747578;
+    color: #494a4b;
 }
 label,input{
   display:flex;
@@ -124,6 +155,7 @@ label,input{
     height: 30px;
     width: 137px;
 }
+
 button {
     color: $background-color;
     font-size: 12px;
@@ -132,23 +164,27 @@ button {
     margin-right: 20px;
     margin-left: 194px;
     border: none;
-    background: rgb(157,117,208);
-    background-size: 130% auto;
+    background: linear-gradient(90deg, 
+                        rgb(174, 128, 234) 0%,
+                        rgb(184, 104, 135) 80%, 
+                        rgb(184, 104, 135) 100%);
+    background-size: 200% 100%;
+    // background-position: right;
     box-shadow: 0px 3px 20px rgba(0,0,0,0.6);
-    background-image: linear-gradient(20deg, 
-                        rgba(174, 128, 234, 0.538) 0%, 
-                        rgba(174, 128, 234, 0.538) 10%,
-                        rgba(184, 104, 135, 0.863) 80%,
-                        rgba(255,172,39,1) 110%);
-    transition: 0.3s;
-    
-    &:hover {
+    transition: all 0.3s ease-out;
+ 
+
+    &:focus, &:hover {
+        outline: 0;
         transform: scale(1.03);
-        transition: 0.2s;
-        background-position: right center;
     }
     &:active {
         transform: scale(0.98);
+    }
+}
+@keyframes textclip {
+    100% {
+        background-position: left;
     }
 }
 .member {
@@ -170,7 +206,6 @@ a {
     color: #F1E6F9;
     }
 }
-
 @media (min-width: 991px){
     input{
         width: 240px;
@@ -225,3 +260,23 @@ a {
         max-width: 199px;
     }
 }
+@media (max-width: 400px) {
+    input {
+        width: 137px;
+    }
+    .col-sm-6 {
+        max-width: 160px;
+    }
+    button {
+    margin: 0;
+    margin-left:95px;
+    }
+    .member {
+        margin: 0;
+    margin-left:68px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+}
+
+ 
