@@ -300,6 +300,17 @@ a {
     .form-header {
         margin-top: 20px;
     }
+    .form-description {
+        width: 80%;
+    }
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sign-up {
+        margin-right: 49px;
+    }
     .container-inputs {
         display: flex;
         justify-content: center;
