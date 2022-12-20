@@ -141,22 +141,17 @@ input {
     background-color: $input-hover;
     transform: scale(1.03);
     }
-    &:hover:valid {
+    &:hover:not([type=password]):valid {
         background-color: $input-valid;
         border: 3px solid $input-valid;
         transition: 0.4s;
-    }
-    &:not(:placeholder-shown):invalid {
-    background-color: $input-invalid;
-    border:1px solid $input-invalid;
-    transition: 0.4s;
     }  
-    &:not([type=text], [type=password], :placeholder-shown):invalid {
+    &:not([type=text]):not([type=password]):not(:placeholder-shown):invalid {
     background-color: $input-invalid;
     border:1px solid $input-invalid;
     transition: 0.4s;
     }
-    &:valid {
+    &:not([type=password]):valid {
         background-color: $input-valid;
         border: 2px solid $input-valid;
         transition: 0.4s;
