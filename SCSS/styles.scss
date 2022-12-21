@@ -73,15 +73,11 @@ body {
     justify-content: flex-end;
     margin-right: 30px;
     margin-top: 20px;
-    gap: 10px;
     transition: 0.3s;
 }
 .theme-button {
+    margin-right: 15px;
     transition: 0.2s;
-}
-.theme-button:hover {
-    transform: translateY(-0.2rem);
-    transition: 0.3s;
 }
 .github-link {
     transition: 0.2s;
@@ -89,11 +85,6 @@ body {
 
     &:visited {
         color: $text-main;
-    }
-    &:hover {
-        color: $text-main;
-        transform: translateY(-0.2rem);
-        transition: 0.2s;
     }
 }
 .container-lg {
