@@ -23,3 +23,4 @@ function styleInvalid(input) {
 }
 
 confirmPass.addEventListener("input", checkPassword);
+pass.addEventListener("input", checkPassword);
