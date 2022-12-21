@@ -43,7 +43,7 @@ html[data-theme='dark']{
 --text-main: #f3f5f8; 
 --text-grey: #afb0b7;
 --text-disabled: #707178;
---input-default:#ada6c1;
+--input-default:#b3acc3;
 --input-focus: #e6dffc;
 --input-hover: #c4c0d1;
 --input-valid:#c6b8ef;
@@ -75,12 +75,8 @@ body {
     margin-top: 20px;
     transition: 0.3s;
 }
-.theme-button {
-    margin-right: 15px;
-    transition: 0.2s;
-    cursor: pointer;
-}
 .github-link {
+    margin-right: 15px;
     transition: 0.2s;
     color: $text-main;
 
@@ -88,6 +84,11 @@ body {
         color: $text-main;
     }
 }
+.theme-button {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
 .container-lg {
     max-width: 960px;
     margin-top: 80px;
@@ -214,7 +215,6 @@ input {
 }
 input:-webkit-autofill, 
 input:-webkit-autofill:focus {
-//   border: 1px solid green;
   -webkit-box-shadow: 0 0 0px 1000px var(--input-valid) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
