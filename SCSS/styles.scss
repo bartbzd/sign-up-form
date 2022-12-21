@@ -76,21 +76,25 @@ body {
     transition: 0.3s;
 }
 .github-link {
+    color: $text-main;
     margin-right: 15px;
     transition: 0.2s;
     &:visited {
         color: $text-main;
     }
+    &:hover {
+            transform: scale(0.95);
+    }
 }
-.github-link:hover {
-    transform: scale(0.95);
+.fa-github:before {
+    color: $text-main;
 }
 .theme-button {
     transition: 0.2s;
     cursor: pointer;
-}
-.theme-button:hover {
-    transform: scale(0.95);
+    &:hover {
+        transform: scale(0.95);
+    }
 }
 .container-lg {
     max-width: 960px;
