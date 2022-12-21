@@ -146,7 +146,7 @@ input {
         border: 3px solid $input-valid;
         transition: 0.4s;
     }  
-    &:not([type=text]):not([type=password]):not(:placeholder-shown):invalid {
+    &:not([type=password]):not(:placeholder-shown):invalid {
     background-color: $input-invalid;
     border:1px solid $input-invalid;
     transition: 0.4s;
