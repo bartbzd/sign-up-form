@@ -75,7 +75,21 @@ body {
     margin-top: 20px;
     transition: 0.3s;
 }
+a.github-link {
+    color: $text-main;
+    margin-right: 15px;
+    transition: 0.2s;
+    &:visited {
+        color: $text-main;
+    }
+    &:hover {
+            transform: scale(0.95);
+    }
+}
 .fa-github:before {
+    color: $text-main;
+}
+i {
     color: $text-main;
 }
 .theme-button {
@@ -286,18 +300,6 @@ a {
         outline: none;
         color: $text-main;
     }
-    .github-link{
-        color: $text-main;
-        margin-right: 15px;
-        transition: 0.2s;
-        &:visited {
-            color: $text-main;
-        }
-        &:hover {
-                transform: scale(0.95);
-        }
-    }
-    
 }
 @media (min-width: 991px){
     input{
