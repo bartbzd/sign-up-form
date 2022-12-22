@@ -75,17 +75,6 @@ body {
     margin-top: 20px;
     transition: 0.3s;
 }
-a.github-link {
-    color: $text-main;
-    margin-right: 15px;
-    transition: 0.2s;
-    &:visited {
-        color: $text-main;
-    }
-    &:hover {
-            transform: scale(0.95);
-    }
-}
 .fa-github:before {
     color: $text-main;
 }
@@ -284,19 +273,31 @@ p.member {
     margin-top: 15px;
 }
 a {
-    color: $text-main;
+    color: $anchor-color;
     text-decoration: none;
 
     &:visited {
-        color: $text-main;
+        color: $anchor-color;
     }
     &:hover {
-    color: $text-grey;
+    color: $a-hover-color;
     }
     &:focus {
         outline: none;
         color: $text-main;
     }
+    .github-link{
+        color: $text-main;
+        margin-right: 15px;
+        transition: 0.2s;
+        &:visited {
+            color: $text-main;
+        }
+        &:hover {
+                transform: scale(0.95);
+        }
+    }
+    
 }
 @media (min-width: 991px){
     input{
